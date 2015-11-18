@@ -29,5 +29,8 @@ class Person
   	def remove_phone_numbers(remove)
   	phone_numbers.delete_at(remove)
   	end
+
+  	def to_s()
+  	end
 end
 
