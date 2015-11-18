@@ -1,7 +1,7 @@
 require 'rspec'
-require './application'
+require './person'
 
-	Rspec.configure do |config|
+	RSpec.configure do |config|
 		config.color = true
 		config.tty = true
 		config.formatter = :documentation
