@@ -13,17 +13,17 @@ describe "Person Class - entries in phonebook" do
 
   it "should store and return email addresses" do
     person = Person.new("joe", "bloggs", "01,01/1990")
+    expect(person.emails).to eq []
 
-    expect (person.emails).to eq []
+    person.add_email "joe@foo.com"
+    person.add_email "joe.bloggs@work.com"    
+   
+    expect(person.emails).to eq  ["joe@foo.com", "joe.bloggs@work.com"]
+    expect(person.remove_email(0))
+    expect(person.emails).to eq  ["joe.bloggs@work.com"]
 
-    expect (person.add_email).to eq "joe@foo.com"
-    expect (person.add_email).to eq "joe.bloggs@work.com" 
-
-    expect (person.emails).to eq  ["joe@foo.com", "joe.bloggs@work.com"] 
-
-
-    expect (person.remove_email(0)).to eq  ["joe.bloggs@work.com"]
   end
 end
 
 
+ 
