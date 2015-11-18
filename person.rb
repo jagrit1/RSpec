@@ -20,5 +20,13 @@ class Person
   	def remove_email (remove)
   	emails.delete_at(remove)
   	end
+
+	def add_phone_numbers(insert)
+    phone_numbers.push(insert)
+  	end
+
+  	def remove_phone_numbers(remove)
+  	phone_numbers.delete_at(remove)
+  	end
 end
 

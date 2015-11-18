@@ -23,6 +23,18 @@ describe "Person Class - entries in phonebook" do
     expect(person.emails).to eq  ["joe.bloggs@work.com"]
 
   end
+  it "should store and return phone numbers" do
+    person = Person.new("joe", "bloggs", "01,01/1990")
+    expect(person.phone_numbers).to eq []
+
+    person.add_phone_numbers "07712345678"
+    person.add_phone_numbers "02012345678"    
+   
+    expect(person.phone_numbers).to eq  ["07712345678", "02012345678"]
+    expect(person.remove_phone_numbers(0))
+    expect(person.phone_numbers).to eq  ["02012345678"]
+  
+  end
 end
 
 
