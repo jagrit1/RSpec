@@ -31,6 +31,7 @@ class Person
   	end
 
   	def to_s()
+    "#{first_name} #{surname} was born on #{dob}.\nTheir email addresses are: #{emails}.\n Their phone numbers are #{phone_numbers}"
   	end
 end
 
