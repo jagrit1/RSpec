@@ -1,3 +1,4 @@
+#test specification for TDD 
 require 'spec_helper'
 
 describe "Person Class - entries in phonebook" do 
