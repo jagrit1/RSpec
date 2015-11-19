@@ -2,7 +2,7 @@ require "date"
 class Person
 	attr_accessor :dob, :first_name, :surname
 	attr_reader  :emails, :phone_numbers
-	def initialize(fname, sname, dob)
+	def initialize(fname = "Jagrit Gyawali", sname, dob)
 		@dob = Date.parse(dob)
 		@first_name = fname.capitalize
 		@surname = sname.capitalize
@@ -53,18 +53,14 @@ class AddressBook
     @entries = []
   end
   def add(person)
-    if person.is_s? Person
-    @entries <<person
-    else
-    raise "Provide a valid name"
-    end
+    @entries << person
   end
 
   def list
     puts "Address Book"
     puts "------------"
     @entries.each_with_index do |person,i|
-    puts "Entry #{i+1}: #{person,fullname}"    
+    puts "Entry #{i+1}: #{person.fullname}"    
     end
   end
 end

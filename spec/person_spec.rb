@@ -72,7 +72,7 @@ describe "Person Class - entries in phonebook" do
       book = AddressBook.new
       book.add person1
       book.add person2
-      expect (book.list).to eq "Address Book ------------ \nEntry 1: Joe Bloggs\nEntry 2: Andy Nother"
+      expect(book.list).to eq "Address Book ------------ \nEntry 1: Joe Bloggs\nEntry 2: Andy Nother"
    end
   end
 
