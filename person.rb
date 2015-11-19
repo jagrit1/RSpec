@@ -42,9 +42,9 @@ end
 
 class FamilyMember < Person
   attr_accessor :relationship
-  def initialize((fname, surname, dob,relationship))
+  def initialize(*args, relationship)
     @relationship = relationship
-    super(fname, sname, dob)
+    super(*args)
   end
 end
 
