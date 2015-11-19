@@ -40,3 +40,11 @@ class Person
 
 end
 
+class FamilyMember < Person
+  attr_accessor :relationship
+  def initialize((fname, surname, dob,relationship))
+    @relationship = relationship
+    super(fname, sname, dob)
+  end
+end
+

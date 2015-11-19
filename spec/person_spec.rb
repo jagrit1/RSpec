@@ -54,6 +54,17 @@ describe "Person Class - entries in phonebook" do
    end
   end
 
+  describe "FamilyMember class that inherits from Person " do 
+   it "Add a FamilyMember that has an additional relationship instance variable and inherits from Person." do
+      familymember = FamilyMember.new("Jag", "bloggs", "01,01/1990","brother")
+      expect(familymember.dob.class).to be Date
+      expect(familymember.dob.to_s).to eq "1990-01-01"
+      expect(familymember.first_name).to eq "Jag"
+      expect(familymember.surname).to eq "Bloggs"
+      expect(familymember.relationship).to eq "brother"
+   end
+  end
+
 
 
 
