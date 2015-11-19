@@ -48,3 +48,24 @@ class FamilyMember < Person
   end
 end
 
+class AddressBook
+  def initialize
+    @entries = []
+  end
+  def add(person)
+    if person.is_s? Person
+    @entries <<person
+    else
+    raise "Provide a valid name"
+    end
+  end
+
+  def list
+    puts "Address Book"
+    puts "------------"
+    @entries.each_with_index do |person,i|
+    puts "Entry #{i+1}: #{person,fullname}"    
+    end
+  end
+end
+

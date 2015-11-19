@@ -65,6 +65,18 @@ describe "Person Class - entries in phonebook" do
    end
   end
 
+  describe " an AddressBook class entries in AddressBook " do 
+   it "create AddressBook with couple of entries for person" do
+      person1 = Person.new("joe", "blogs", "1 Jan 1990")
+      person2 = Person.new("andy", "nother", "2 Jan 1995")
+      book = AddressBook.new
+      book.add person1
+      book.add person2
+      expect (book.list).to eq "Address Book ------------ \nEntry 1: Joe Bloggs\nEntry 2: Andy Nother"
+   end
+  end
+
+
 
 
 
