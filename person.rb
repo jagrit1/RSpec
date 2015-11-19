@@ -33,5 +33,10 @@ class Person
   	def to_s()
     "#{first_name} #{surname} was born on #{dob}.\nTheir email addresses are: #{emails}.\n Their phone numbers are #{phone_numbers}"
   	end
+
+    def print_details ()
+      "#{fullname}\n ---------- \n Date of Birth: #{@dob.strftime('%d %B %Y')} \n\n Email Addresses:\n - #{emails.join(" \n- ")} \n\n Phone Numbers:\n #{phone_numbers.join}"
+    end
+
 end
 
